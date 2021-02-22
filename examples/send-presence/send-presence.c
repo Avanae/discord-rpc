@@ -52,6 +52,13 @@ static void updateDiscordPresence()
         discordPresence.joinSecret = "join";
         discordPresence.spectateSecret = "look";
         discordPresence.instance = 0;
+
+        DiscordButton buttons[] = {
+          {.label = "test", .url = "https://example.com"},
+          {.label = "test 2", .url = "https://example.com"},
+        };
+
+        discordPresence.buttons = buttons;
         Discord_UpdatePresence(&discordPresence);
     }
     else {
